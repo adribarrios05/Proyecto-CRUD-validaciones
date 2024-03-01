@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #525252;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: #33333388;
+    border-radius: 20px;
+    box-shadow: -10px -10px 20px #3c3c3c, 10px 10px 20px #292929;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #f44336;
+}
+
+.input-group, select {
+    margin-bottom: 20px;
+    
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-group input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #444;
+    color: #fff;
+    box-shadow: inset 5px 5px 5px #2d2d2d,
+                inset -5px -5px 5px #444;
+}
+
+.login-button, .register-button{
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: inset 5px 5px 5px #f44336,
+                inset -5px -5px 5px #7f0901;
+}
+
+.login-button:focus, .register-button:focus {
+    box-shadow: inset 5px 5px 5px #7f0901,
+                inset -5px -5px 5px #f64b3e;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.options a {
+    color: #f44336;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+table{
+    width: 600px;
+    border-spacing: 0;
+    color: #f44336;
+    text-align: center;
+    overflow: hidden;
+    box-shadow:      9px 16px #2d2d2da5,
+         -9px 16px #444444a5;
+  }
+  table thead{
+    box-shadow:9px 16px #2d2d2d;
+  }
+  table th{
+    padding: 7px;
+  }
+  
+  table>tbody>tr>td {
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+  }
+
+  table>tbody>tr:hover {
+    padding: 20px;
+    box-shadow: inset 9px 16px #2d2d2da5,
+    inset -9px 16px #444444a5;
+  }
+  
+  table tr td:first-child::before {
+    content: "";
+    position: absolute;
+    padding: 7px;
+    top: 0;
+    left: -5000px;
+    width: 10000px;
+    height: 100%;
+    z-index: -10;
+  }
+  
+  table td:hover::after {
+    content: "";
+    position: absolute;
+    box-shadow: inset 16px #2d2d2da5,
+    inset -9px 16px #444444a5;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .help {
+    color: red;
+    visibility: hidden;
+  }

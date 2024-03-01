@@ -1,0 +1,84 @@
+html,
+body{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #525252;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table.table{
+  width: 900px;
+  height: 100%;
+  border-spacing: 0;
+  color: #f44336;
+  background-color: #33333388;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 9px 9px 16px #2d2d2d,
+  -9px -9px 16px #444;
+}
+table.table thead{
+  box-shadow: 9px 9px 16px #444;
+}
+table.table th{
+  padding: 7px;
+}
+
+table.table>tbody>tr>td {
+  padding: 10px;
+  font-size: 14px;
+  position: relative;
+}
+
+
+table.table>tbody>tr:hover {
+  padding: 20px;
+  box-shadow: 9px 9px 16px #2d2d2d,
+  -9px -9px 16px #444;
+}
+
+table.table tr td:first-child::before {
+  content: "";
+  position: absolute;
+  padding: 7px;
+  top: 0;
+  left: -5000px;
+  width: 10000px;
+  height: 100%;
+  z-index: -10;
+}
+
+table.table td:hover::after {
+  content: "";
+  position: absolute;
+  box-shadow: inset 9px 9px 16px #2d2d2d,
+  inset -9px -9px 16px #444;  
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+@media screen and (width<900px){
+    table.table{
+        width: 600px;
+    }
+}
+
+@media screen and (width<600px){
+    table.table{
+        width: 400px;
+    }
+}

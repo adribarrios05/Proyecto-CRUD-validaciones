@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-vhRU8+DbbeuWSSv5LOw5P0Cl/EBlW5BMKyTbQDY1FrvuYM8qcKz3Ji6xUMO1rW0U2k95ftEbK3TIHPDDtnIyJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sing up</h2>
+        <form action="" method="post" onsubmit= "return validacion()">
+            <div class="input-group">
+                <label for="firstName">Name:</label>
+                <input type="text" onchange="eliminarError('firstName')" id="firstName" name="firstName" placeholder="Enter your name">
+                <div id="nameHelp" class="help">Please, enter a valid name </div>
+            </div>
+
+            <div class="input-group">
+                <label for="lastName">Surname:</label>
+                <input type="text" onchange="eliminarError('lastName')" id="lastName" name="lastName" placeholder="Enter your surname">
+                <div id="surnameHelp" class="help">Please, enter a valid surname </div>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <select name="phone" id="phone">
+                    <option value="">+34</option>
+                    <option value="">+1</option>
+                    <option value="">+2</option>
+                    <option value="">+3</option>
+                    <option value="">+4</option>
+                </select>
+                <input type="tel" onchange="eliminarError('phone')" id="phone" name="phone" placeholder="Enter your phone">
+                <div id="phoneHelp" class="help">Please, enter a valid phone number </div>
+            </div>
+
+            <div class="input-group">
+                <label for="address">Dirección:</label>
+                <input type="text" onchange="eliminarError('address')" id="address" name="address" placeholder="Enter your adress">
+                <div id="addressHelp" class="help">Please, enter a valid address </div>
+            </div>
+
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <div id="usernameHelp" class="help">Please, enter a valid username </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <div id="passwordHelp" class="help">The password must have between 8 and 15 letters, numbers or symbols </div>
+            </div>
+
+            <button class="register-button" type="submit">Sing up</button>
+
+            <div class="options">
+                <a href="login.html"><i class="icon fas fa-car"></i> Return to log in</a>
+            </div>
+        </form>
+    </div>
+    <script src="./js/validacion.js"></script>
+</body>
+</html>
