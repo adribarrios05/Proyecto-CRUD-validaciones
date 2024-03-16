@@ -12,16 +12,16 @@
 
     <div class="container">
         <h2>Sing up</h2>
-        <form action="" method="post" onsubmit= "return validacion()">
+        <form id="form" method="post" onsubmit= "return validacion()">
             <div class="input-group">
-                <label for="firstName">Name:</label>
-                <input type="text" onchange="eliminarError('firstName')" id="firstName" name="firstName" placeholder="Enter your name">
+                <label for="name">Name:</label>
+                <input type="text" onchange="eliminarError('name')" id="name" name="name" placeholder="Enter your name">
                 <div id="nameHelp" class="help">Please, enter a valid name </div>
             </div>
 
             <div class="input-group">
-                <label for="lastName">Surname:</label>
-                <input type="text" onchange="eliminarError('lastName')" id="lastName" name="lastName" placeholder="Enter your surname">
+                <label for="surname">Surname:</label>
+                <input type="text" onchange="eliminarError('surname')" id="surname" name="surname" placeholder="Enter your surname">
                 <div id="surnameHelp" class="help">Please, enter a valid surname </div>
             </div>
 
@@ -42,6 +42,12 @@
                 <label for="address">Dirección:</label>
                 <input type="text" onchange="eliminarError('address')" id="address" name="address" placeholder="Enter your adress">
                 <div id="addressHelp" class="help">Please, enter a valid address </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="text" onchange="eliminarError('email')" id="email" name="email" placeholder="Enter your email">
+                <div id="emailHelp" class="help">Please, enter a valid email </div>
             </div>
 
             <div class="input-group">
