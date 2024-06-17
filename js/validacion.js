@@ -13,43 +13,49 @@ function validacion() {
     var surnameInput = document.getElementById('surname').value;
     var phoneInput = document.getElementById('phone').value;
     var addressInput = document.getElementById('address').value;
+    var emailInput = document.getElementById('email').value;
     var usernameInput = document.getElementById('username').value;
     var passwordInput = document.getElementById('password').value;
 
-    var nameSurnameRegex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s\d,.-]{2,50}$/;
-    var phoneRegex = /^\d{9}$/;
-    var addressRegex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s\d,.-]{2,50}$/;
-    var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var passwordRegex = /[a-zñ]/;
-
+    var nameSurnameValid = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s\d,.-]{2,50}$/;
+    var phoneValid = /^\d{9}$/;
+    var addressValid = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s\d,.-]{2,50}$/;
+    var emailValid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var passwordValid = /[a-zñA-ZÑ0-9.!#$%&'*+/=?_`{|}~-]{8,50}$/;
+    var usernameValid = /[a-zñA-ZÑ0-9.-_]{1,100}$/;
 
     var isValid = true;
 
-    if (!nameSurnameRegex.test(nameInput)) {
+    if (!nameSurnameValid.test(nameInput)) {
         document.getElementById('nameHelp').style.visibility = 'visible';
         isValid = false;
     }
 
-    if (!nameSurnameRegex.test(surnameInput)) {
+    if (!nameSurnameValid.test(surnameInput)) {
         document.getElementById('surnameHelp').style.visibility = 'visible';
         isValid = false;
     }
 
-    if (!phoneRegex.test(phoneInput)) {
+    if (!phoneValid.test(phoneInput)) {
         document.getElementById('phoneHelp').style.visibility = 'visible';
         isValid = false;
     }
-    if (!emailRegex.test(emailInput)) {
+    if (!emailValid.test(emailInput)) {
         document.getElementById('emailHelp').style.visibility = 'visible';
         isValid = false;
     }
-    if (!emailRegex.test(emailInput)) {
-        document.getElementById('emailHelp').style.visibility = 'visible';
+    if (!addressValid.test(addressInput)) {
+        document.getElementById('addressHelp').style.visibility = 'visible';
         isValid = false;
     }
-
-
-    // Aquí puedes agregar más validaciones según tus necesidades, como para el campo de correo electrónico
+    if (!passwordValid.test(passwordInput)) {
+        document.getElementById('passwordHelp').style.visibility = 'visible';
+        isValid = false;
+    }
+    if (!usernameValid.test(usernameInput)) {
+        document.getElementById('usernameHelp').style.visibility = 'visible';
+        isValid = false;
+    }
 
     return isValid;
 }
