@@ -12,24 +12,28 @@
 
     <div class="container">
         <h2>Log in</h2>
-
+        <form id="form" method="post" onsubmit="return validacionLogin()">
         <div class="input-group">
-            <label for="username">User:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your user" required>
+            <label for="username">Username:</label>
+            <input type="text" onchange="eliminarError('username')" id="username" name="username" placeholder="Enter your username">
+            <div id="usernameHelp" class="help">Please, enter a valid username </div>
         </div>
 
         <div class="input-group">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <input type="password" onchange="eliminarError('password')" id="password" name="password" placeholder="Enter your password">
+            <div id="passwordHelp" class="help">The password must have between 8 and 15 letters, numbers or symbols </div>
         </div>
 
-        <button class="login-button" type="submit">Log in</button>
+            <button class="login-button" type="submit">Log in</button>
 
-        <div class="options">
-            <a href="#"><i class="icon fas fa-car"></i> Forgot your password?</a>
-            <a href="insercion.html"><i class="icon fas fa-flag-checkered"></i> Sing up</a>
-        </div>
+            <div class="options">
+                <a href="#"><i class="icon fas fa-car"></i> Forgot your password?</a>
+                <a href="insercion.html"><i class="icon fas fa-flag-checkered"></i> Sing up</a>
+            </div>
+        </form>
     </div>
 
+    <script src="./js/validacion.js"></script>
 </body>
 </html>

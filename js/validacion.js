@@ -8,7 +8,7 @@ function eliminarError(fieldId) {
     document.getElementById(fieldId + 'Help').style.visibility = 'hidden';
 }
 
-function validacion() {
+function validacionRegistro() {
     var nameInput = document.getElementById('name').value;
     var surnameInput = document.getElementById('surname').value;
     var phoneInput = document.getElementById('phone').value;
@@ -48,6 +48,27 @@ function validacion() {
         document.getElementById('addressHelp').style.visibility = 'visible';
         isValid = false;
     }
+    if (!passwordValid.test(passwordInput)) {
+        document.getElementById('passwordHelp').style.visibility = 'visible';
+        isValid = false;
+    }
+    if (!usernameValid.test(usernameInput)) {
+        document.getElementById('usernameHelp').style.visibility = 'visible';
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+function validacionLogin() {
+    var usernameInput = document.getElementById('username').value;
+    var passwordInput = document.getElementById('password').value;
+
+    var passwordValid = /[a-zñA-ZÑ0-9.!#$%&'*+/=?_`{|}~-]{8,50}$/;
+    var usernameValid = /[a-zñA-ZÑ0-9.-_]{1,100}$/;
+
+    var isValid = true;
+
     if (!passwordValid.test(passwordInput)) {
         document.getElementById('passwordHelp').style.visibility = 'visible';
         isValid = false;

@@ -11,59 +11,64 @@
 <body>
 
     <div class="container">
-        <h2>Edit your account</h2>
+        <h2>Sing up</h2>
+        <form id="form" method="post" onsubmit="return validacionRegistro()">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" onchange="eliminarError('name')" id="name" name="name" placeholder="Enter your name" value="Adrián">
+                <div id="nameHelp" class="help">Please, enter a valid name </div>
+            </div>
 
-        <div class="input-group">
-            <label for="firstName">Name:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Enter your name" value="Ejemplo" required>
-        </div>
+            <div class="input-group">
+                <label for="surname">Surname:</label>
+                <input type="text" onchange="eliminarError('surname')" id="surname" name="surname" placeholder="Enter your surname" value="Barrios Márquez">
+                <div id="surnameHelp" class="help">Please, enter a valid surname </div>
+            </div>
 
-        <div class="input-group">
-            <label for="lastName">Surname:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Enter your surname" value="Ejemplo Ejemplo" required>
-        </div>
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <select name="phone" id="phoneprefix">
+                    <option value="">+34</option>
+                    <option value="">+1</option>
+                    <option value="">+2</option>
+                    <option value="">+3</option>
+                    <option value="">+4</option>
+                </select>
+                <input type="tel" onchange="eliminarError('phone')" id="phone" name="phone" placeholder="Enter your phone" value="123456789">
+                <div id="phoneHelp" class="help">Please, enter a valid phone number </div>
+            </div>
 
-        <div class="input-group">
-            <label for="phone">Phone:</label>
-            <select name="phone" class="phone" id="phone-prefix">
-                <option value="">+34</option>
-                <option value="">+1</option>
-                <option value="">+2</option>
-                <option value="">+3</option>
-                <option value="">+4</option>
-                <option value="">+5</option>
-                <option value="">+6</option>
-                <option value="">+7</option>
-                <option value="">+8</option>
-                <option value="">+9</option>
-                <option value="">+10</option>
-                <option value="">+11</option>
-                <option value="">+12</option>
-            </select>
-            <input type="tel" class="phone" name="phone" placeholder="Enter your phone" value="600 123 456" required>
-        </div>
+            <div class="input-group">
+                <label for="address">Dirección:</label>
+                <input type="text" onchange="eliminarError('address')" id="address" name="address" placeholder="Enter your adress" value="c/ Ave del Paraíso 7">
+                <div id="addressHelp" class="help">Please, enter a valid address </div>
+            </div>
 
-        <div class="input-group">
-            <label for="address">Dirección:</label>
-            <input type="text" id="address" name="address" placeholder="Enter your adress" value="ejemplo@mail.com" required>
-        </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="text" onchange="eliminarError('email')" id="email" name="email" placeholder="Enter your email" value="adri@gmail.com">
+                <div id="emailHelp" class="help">Please, enter a valid email </div>
+            </div>
 
-        <div class="input-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" value="usuario" required>
-        </div>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" value="adri_">
+                <div id="usernameHelp" class="help">Please, enter a valid username </div>
+            </div>
 
-        <div class="input-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" value="contraseña" required>
-        </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" value="adri1234!">
+                <div id="passwordHelp" class="help">The password must have between 8 and 15 letters, numbers or symbols </div>
+            </div>
 
-        <button class="register-button" type="submit">Sing up</button>
+            <button class="register-button" type="submit">Sing up</button>
 
-        <div class="options">
-            <a href="login.html"><i class="icon fas fa-car"></i>Go to log in</a>
-        </div>
+            <div class="options">
+                <a href="login.html"><i class="icon fas fa-car"></i> Return to log in</a>
+            </div>
+        </form>
     </div>
-
+    <script src="./js/validacion.js"></script>  
 </body>
 </html>

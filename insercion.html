@@ -12,7 +12,7 @@
 
     <div class="container">
         <h2>Sing up</h2>
-        <form id="form" method="post" onsubmit="return validacion()">
+        <form id="form" method="post" onsubmit="return validacionRegistro()">
             <div class="input-group">
                 <label for="name">Name:</label>
                 <input type="text" onchange="eliminarError('name')" id="name" name="name" placeholder="Enter your name">
@@ -27,7 +27,7 @@
 
             <div class="input-group">
                 <label for="phone">Phone:</label>
-                <select name="phone" id="phone">
+                <select name="phone" id="phoneprefix">
                     <option value="">+34</option>
                     <option value="">+1</option>
                     <option value="">+2</option>
@@ -52,13 +52,13 @@
 
             <div class="input-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <input type="text" onchange="eliminarError('username')" id="username" name="username" placeholder="Enter your username">
                 <div id="usernameHelp" class="help">Please, enter a valid username </div>
             </div>
 
             <div class="input-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <input type="password" onchange="eliminarError('password')" id="password" name="password" placeholder="Enter your password">
                 <div id="passwordHelp" class="help">The password must have between 8 and 15 letters, numbers or symbols </div>
             </div>
 
